@@ -42,7 +42,7 @@ namespace lab2
         private void buttonRotateZ_Click(object sender, EventArgs e)
         {
             int rotateZ= (int)numericUpDownRotateZ.Value;
-            cripper.RotateZ(rotateZ);
+           cripper.RotateZ(rotateZ);
         }
 
         private void buttonClear_Click(object sender, EventArgs e)

@@ -9,3 +9,14 @@ D:\computers graphics\lab2\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
 D:\computers graphics\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
 D:\computers graphics\lab2\lab2\obj\Debug\lab2.exe
 D:\computers graphics\lab2\lab2\obj\Debug\lab2.pdb
+C:\Users\Максим\графика\lab2\lab2\bin\Debug\lab2.exe.config
+C:\Users\Максим\графика\lab2\lab2\bin\Debug\lab2.exe
+C:\Users\Максим\графика\lab2\lab2\bin\Debug\lab2.pdb
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.csproj.AssemblyReference.cache
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.Form1.resources
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.Properties.Resources.resources
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.exe
+C:\Users\Максим\графика\lab2\lab2\obj\Debug\lab2.pdb
