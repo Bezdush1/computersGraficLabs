@@ -510,6 +510,71 @@ namespace lab2
             return copy;
         }
 
-        
+        public void ApplyIsometricProjection()
+        {
+            ApplyIsometricProjectionToFigure(figureFrontArrays);
+            ApplyIsometricProjectionToFigure(figureBackArrays);
+
+            // Обновление координат соединений точек по оси Z
+            UpdateZAxisConnections();
+
+            Draw();
+        }
+
+        private void ApplyIsometricProjectionToFigure(Point3D[][] figure)
+        {
+            // Коэффициенты для изометрической проекции
+            double isometricX = 0.707;
+            double isometricY = 0.707;
+
+            for (int i = 0; i < figure.Length; i++)
+            {
+                for (int j = 0; j < figure[i].Length; j++)
+                {
+                    double x = figure[i][j].X;
+                    double y = figure[i][j].Y;
+                    double z = figure[i][j].Z;
+
+                    // Применение изометрической проекции
+                    double newX = x * isometricX - y * isometricX;
+                    double newY = x * isometricY + y * isometricY - z;
+
+                    figure[i][j] = new Point3D((int)newX, (int)newY, (int)z);
+                }
+            }
+        }
+
+        public void ResetToBaseCoordinates()
+        {
+            for (int i = 0; i < figureFrontArrays.Length; i++)
+            {
+                for (int j = 0; j < figureFrontArrays[i].Length; j++)
+                {
+                    figureFrontArrays[i][j] = new Point3D(
+                        figureFrontArraysBase[i][j].X,
+                        figureFrontArraysBase[i][j].Y,
+                        figureFrontArraysBase[i][j].Z
+                    );
+                }
+            }
+
+            for (int i = 0; i < figureBackArrays.Length; i++)
+            {
+                for (int j = 0; j < figureBackArrays[i].Length; j++)
+                {
+                    figureBackArrays[i][j] = new Point3D(
+                        figureBackArraysBase[i][j].X,
+                        figureBackArraysBase[i][j].Y,
+                        figureBackArraysBase[i][j].Z
+                    );
+                }
+            }
+
+            // Также обновите координаты соединений по оси Z
+            UpdateZAxisConnectionsFront();
+            UpdateZAxisConnectionsBack();
+
+            Draw();
+        }
     }
 }
