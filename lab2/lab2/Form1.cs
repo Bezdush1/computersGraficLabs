@@ -47,7 +47,7 @@ namespace lab2
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            cripper.ResetToBaseCoordinates();
+            cripper.ClearCanvas();
         }
 
         private void buttonScale_Click(object sender, EventArgs e)
@@ -66,11 +66,6 @@ namespace lab2
             int transferZ=(int)numericUpDownTransferZ.Value;
 
             cripper.Move(transferX, transferY, transferZ);
-        }
-
-        private void buttonIsometricProection_Click(object sender, EventArgs e)
-        {
-            cripper.ApplyIsometricProjection();
         }
     }
 }
