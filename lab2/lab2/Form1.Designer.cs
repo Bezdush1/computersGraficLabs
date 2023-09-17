@@ -65,6 +65,7 @@
             this.numericUpDownTransferX = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.buttonIsometricProection = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRotateX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRotateY)).BeginInit();
@@ -80,7 +81,7 @@
             // buttonDraw
             // 
             this.buttonDraw.Location = new System.Drawing.Point(626, 12);
-            this.buttonDraw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDraw.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDraw.Name = "buttonDraw";
             this.buttonDraw.Size = new System.Drawing.Size(101, 36);
             this.buttonDraw.TabIndex = 0;
@@ -91,18 +92,18 @@
             // buttonClear
             // 
             this.buttonClear.Location = new System.Drawing.Point(626, 53);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(101, 36);
+            this.buttonClear.Size = new System.Drawing.Size(101, 49);
             this.buttonClear.TabIndex = 1;
-            this.buttonClear.Text = "Стирание фигуры";
+            this.buttonClear.Text = "Вернуться на базовые координаты";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(578, 436);
             this.pictureBox1.TabIndex = 2;
@@ -111,7 +112,7 @@
             // buttonRotateX
             // 
             this.buttonRotateX.Location = new System.Drawing.Point(626, 145);
-            this.buttonRotateX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRotateX.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRotateX.Name = "buttonRotateX";
             this.buttonRotateX.Size = new System.Drawing.Size(101, 36);
             this.buttonRotateX.TabIndex = 3;
@@ -142,7 +143,7 @@
             // numericUpDownRotateX
             // 
             this.numericUpDownRotateX.Location = new System.Drawing.Point(699, 123);
-            this.numericUpDownRotateX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownRotateX.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownRotateX.Maximum = new decimal(new int[] {
             360,
             0,
@@ -165,7 +166,7 @@
             // numericUpDownRotateY
             // 
             this.numericUpDownRotateY.Location = new System.Drawing.Point(699, 221);
-            this.numericUpDownRotateY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownRotateY.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownRotateY.Maximum = new decimal(new int[] {
             360,
             0,
@@ -208,7 +209,7 @@
             // buttonRotateY
             // 
             this.buttonRotateY.Location = new System.Drawing.Point(626, 242);
-            this.buttonRotateY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRotateY.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRotateY.Name = "buttonRotateY";
             this.buttonRotateY.Size = new System.Drawing.Size(101, 36);
             this.buttonRotateY.TabIndex = 7;
@@ -219,7 +220,7 @@
             // numericUpDownRotateZ
             // 
             this.numericUpDownRotateZ.Location = new System.Drawing.Point(699, 308);
-            this.numericUpDownRotateZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownRotateZ.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownRotateZ.Maximum = new decimal(new int[] {
             360,
             0,
@@ -262,7 +263,7 @@
             // buttonRotateZ
             // 
             this.buttonRotateZ.Location = new System.Drawing.Point(626, 334);
-            this.buttonRotateZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRotateZ.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRotateZ.Name = "buttonRotateZ";
             this.buttonRotateZ.Size = new System.Drawing.Size(101, 36);
             this.buttonRotateZ.TabIndex = 11;
@@ -274,7 +275,7 @@
             // 
             this.numericUpDownScaleX.DecimalPlaces = 2;
             this.numericUpDownScaleX.Location = new System.Drawing.Point(942, 59);
-            this.numericUpDownScaleX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownScaleX.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownScaleX.Maximum = new decimal(new int[] {
             10,
             0,
@@ -354,7 +355,7 @@
             // 
             this.numericUpDownScaleY.DecimalPlaces = 2;
             this.numericUpDownScaleY.Location = new System.Drawing.Point(941, 112);
-            this.numericUpDownScaleY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownScaleY.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownScaleY.Maximum = new decimal(new int[] {
             10,
             0,
@@ -374,7 +375,7 @@
             // 
             this.numericUpDownScaleZ.DecimalPlaces = 2;
             this.numericUpDownScaleZ.Location = new System.Drawing.Point(941, 170);
-            this.numericUpDownScaleZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownScaleZ.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownScaleZ.Maximum = new decimal(new int[] {
             10,
             0,
@@ -403,7 +404,7 @@
             // buttonScale
             // 
             this.buttonScale.Location = new System.Drawing.Point(874, 193);
-            this.buttonScale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonScale.Margin = new System.Windows.Forms.Padding(2);
             this.buttonScale.Name = "buttonScale";
             this.buttonScale.Size = new System.Drawing.Size(101, 36);
             this.buttonScale.TabIndex = 28;
@@ -414,7 +415,7 @@
             // buttonTransfer
             // 
             this.buttonTransfer.Location = new System.Drawing.Point(874, 422);
-            this.buttonTransfer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTransfer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTransfer.Name = "buttonTransfer";
             this.buttonTransfer.Size = new System.Drawing.Size(101, 36);
             this.buttonTransfer.TabIndex = 39;
@@ -435,7 +436,7 @@
             // numericUpDownTransferZ
             // 
             this.numericUpDownTransferZ.Location = new System.Drawing.Point(941, 400);
-            this.numericUpDownTransferZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownTransferZ.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownTransferZ.Minimum = new decimal(new int[] {
             100,
             0,
@@ -448,7 +449,7 @@
             // numericUpDownTransferY
             // 
             this.numericUpDownTransferY.Location = new System.Drawing.Point(941, 342);
-            this.numericUpDownTransferY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownTransferY.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownTransferY.Minimum = new decimal(new int[] {
             100,
             0,
@@ -501,7 +502,7 @@
             // numericUpDownTransferX
             // 
             this.numericUpDownTransferX.Location = new System.Drawing.Point(942, 289);
-            this.numericUpDownTransferX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownTransferX.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownTransferX.Minimum = new decimal(new int[] {
             100,
             0,
@@ -531,11 +532,23 @@
             this.label20.TabIndex = 29;
             this.label20.Text = "Переместить по оси x";
             // 
+            // buttonIsometricProection
+            // 
+            this.buttonIsometricProection.Location = new System.Drawing.Point(626, 400);
+            this.buttonIsometricProection.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonIsometricProection.Name = "buttonIsometricProection";
+            this.buttonIsometricProection.Size = new System.Drawing.Size(101, 36);
+            this.buttonIsometricProection.TabIndex = 40;
+            this.buttonIsometricProection.Text = "Изометрическая проекция";
+            this.buttonIsometricProection.UseVisualStyleBackColor = true;
+            this.buttonIsometricProection.Click += new System.EventHandler(this.buttonIsometricProection_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 468);
+            this.Controls.Add(this.buttonIsometricProection);
             this.Controls.Add(this.buttonTransfer);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.numericUpDownTransferZ);
@@ -573,7 +586,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonDraw);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -630,6 +643,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownTransferX;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button buttonIsometricProection;
     }
 }
 
