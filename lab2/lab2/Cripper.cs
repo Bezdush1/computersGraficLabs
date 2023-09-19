@@ -7,11 +7,11 @@ namespace lab2
 {
     public struct Point3D
     {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public int Z { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Z { get; set; }
 
-        public Point3D(int x, int y, int z)
+        public Point3D(double x, double y, double z)
         {
             X = x;
             Y = y;
@@ -23,6 +23,8 @@ namespace lab2
     {
         private Bitmap bmp;
         private PictureBox pictureBox;
+
+        const int CELL = 20;
 
         private Point3D[] bodyFront;
         private Point3D[] headFront;
@@ -102,105 +104,104 @@ namespace lab2
         }
 
         private void InitializeCoordinates()
-        {
+        { 
             bodyFront = new Point3D[]
-                        {
-                new Point3D(-40, -75, 0),
-                new Point3D(-40, 75, 0),
-                new Point3D(40, 75, 0),
-                new Point3D(40, -75, 0)
-                        };
+            {
+        new Point3D(-2, -2.5, 0),
+        new Point3D(-2, 2.5, 0),
+        new Point3D(2, 2.5, 0),
+        new Point3D(2, -2.5, 0)
+            };
 
             headFront = new Point3D[]
             {
-                new Point3D(-50, 75, 0),
-                new Point3D(50, 75, 0),
-                new Point3D(50, 175, 0),
-                new Point3D(-50, 175, 0)
+        new Point3D(-2.5, 2.5, 0),
+        new Point3D(2.5, 2.5, 0),
+        new Point3D(2.5, 7.5, 0),
+        new Point3D(-2.5, 7.5, 0)
             };
 
             leftLegsFront = new Point3D[]
             {
-                new Point3D(0, -75, 0),
-                new Point3D(0, -115, 0),
-                new Point3D(-50, -115, 0),
-                new Point3D(-50, -75, 0)
+        new Point3D(0, -2.5, 0),
+        new Point3D(0, -4.5, 0),
+        new Point3D(-2.5, -4.5, 0),
+        new Point3D(-2.5, -2.5, 0)
             };
 
             rightLegsFront = new Point3D[]
             {
-                new Point3D(0, -75, 0),
-                new Point3D(0, -115, 0),
-                new Point3D(50, -115, 0),
-                new Point3D(50, -75, 0)
+        new Point3D(0, -2.5, 0),
+        new Point3D(0, -4.5, 0),
+        new Point3D(2.5, -4.5, 0),
+        new Point3D(2.5, -2.5, 0)
             };
 
             mouth = new Point3D[]
             {
-                new Point3D(-40, 95, 0),
-                new Point3D(40, 95, 0),
-                new Point3D(40, 115, 0),
-                new Point3D(-40, 115, 0)
+        new Point3D(-2, 3, 0),
+        new Point3D(2, 3, 0),
+        new Point3D(2, 4, 0),
+        new Point3D(-2, 4, 0)
             };
 
             rightEye = new Point3D[]
             {
-                new Point3D(30, 155, 0),
-                new Point3D(30, 135, 0),
-                new Point3D(10, 135, 0),
-                new Point3D(10, 155, 0),
+        new Point3D(1.5, 6.5, 0),
+        new Point3D(1.5, 5.5, 0),
+        new Point3D(0.5, 5.5, 0),
+        new Point3D(0.5, 6.5, 0),
             };
 
             leftEye = new Point3D[]
             {
-                new Point3D(-10, 155, 0),
-                new Point3D(-10, 135, 0),
-                new Point3D(-30, 135, 0),
-                new Point3D(-30, 155, 0),
+        new Point3D(-0.5, 6.5, 0),
+        new Point3D(-0.5, 5.5, 0),
+        new Point3D(-1.5, 5.5, 0),
+        new Point3D(-1.5, 6.5, 0),
             };
 
             headBack = new Point3D[]
             {
-                new Point3D(-50, 75, 80),
-                new Point3D(50, 75, 80),
-                new Point3D(50, 175, 80),
-                new Point3D(-50, 175, 80)
+        new Point3D(-2.5, 2.5, 4),
+        new Point3D(2.5, 2.5, 4),
+        new Point3D(2.5, 7.5, 4),
+        new Point3D(-2.5, 7.5, 4)
             };
 
             bodyBack = new Point3D[]
             {
-                new Point3D(-40, -75, 80),
-                new Point3D(-40, 75, 80),
-                new Point3D(40, 75, 80),
-                new Point3D(40, -75, 80)
+        new Point3D(-2, -2.5, 4),
+        new Point3D(-2, 2.5, 4),
+        new Point3D(2, 2.5, 4),
+        new Point3D(2, -2.5, 4)
             };
 
             leftLegsBack = new Point3D[]
             {
-               new Point3D(0, -75, 80),
-                new Point3D(0, -115, 80),
-                new Point3D(-50, -115, 80),
-                new Point3D(-50, -75, 80)
+        new Point3D(0, -2.5, 4),
+        new Point3D(0, -4.5, 4),
+        new Point3D(-2.5, -4.5, 4),
+        new Point3D(-2.5, -2.5, 4)
             };
 
             rightLegsBack = new Point3D[]
             {
-                new Point3D(0, -75, 80),
-                new Point3D(0, -115, 80),
-                new Point3D(50, -115, 80),
-                new Point3D(50, -75, 80)
+        new Point3D(0, -2.5, 4),
+        new Point3D(0, -4.5, 4),
+        new Point3D(2.5, -4.5, 4),
+        new Point3D(2.5, -2.5, 4)
             };
-
-
         }
+
 
         public void Draw()
         {
             ClearCanvas();
 
+            MultiplyCoordinatesByCell();
+
             Pen blackPen = new Pen(Color.Black);
-            SolidBrush greenFill = new SolidBrush(Color.Green);
-            SolidBrush blackFill = new SolidBrush(Color.Black);
 
             using (Graphics g = Graphics.FromImage(bmp))
             {
@@ -223,6 +224,8 @@ namespace lab2
             }
 
             pictureBox.Image = bmp;
+
+            CopyBaseCoordinatesToFigures();
         }
 
         public void ClearCanvas()
@@ -238,17 +241,19 @@ namespace lab2
                 var points2D = new PointF[polygon.Length];
                 for (int i = 0; i < polygon.Length; i++)
                 {
-                    points2D[i] = new PointF(polygon[i].X, polygon[i].Y);
+                    points2D[i] = new PointF((float)polygon[i].X, (float)polygon[i].Y);
                 }
                 g.DrawPolygon(drawPen, points2D);
             }
         }
 
+
         private void DrawZAxisConnections(Graphics g, Pen drawPen)
         {
             for (int i = 0; i < zAxisConnectionsFront.Length; i++)
             {
-                g.DrawLine(drawPen, zAxisConnectionsFront[i].X, zAxisConnectionsFront[i].Y, zAxisConnectionsBack[i].X, zAxisConnectionsBack[i].Y);
+                g.DrawLine(drawPen, (float)zAxisConnectionsFront[i].X, (float)zAxisConnectionsFront[i].Y,
+                    (float)zAxisConnectionsBack[i].X, (float)zAxisConnectionsBack[i].Y);
             }
         }
 
@@ -270,40 +275,44 @@ namespace lab2
             Draw();
         }
 
-        public void ApplyRotationToFigure(int angleInDegrees, char axis)
+        private void ApplyRotationToFigure(float angleInDegrees, char axis)
         {
-            float radians = angleInDegrees * (float)Math.PI / 180;
+            // Преобразование угла из градусов в радианы
+            float angleInRadians = (float)(angleInDegrees * Math.PI / 180);
 
             for (int i = 0; i < figureFrontArrays.Length; i++)
             {
                 for (int j = 0; j < figureFrontArrays[i].Length; j++)
                 {
-                    float x = figureFrontArraysBase[i][j].X;
-                    float y = figureFrontArraysBase[i][j].Y;
-                    float z = figureFrontArraysBase[i][j].Z;
+                    float x = (float)figureFrontArraysBase[i][j].X;
+                    float y = (float)figureFrontArraysBase[i][j].Y;
+                    float z = (float)figureFrontArraysBase[i][j].Z;
 
                     float newX = 0, newY = 0, newZ = 0;
 
                     if (axis == 'X')
                     {
-                        newY = y * (float)Math.Cos(radians) - z * (float)Math.Sin(radians);
-                        newZ = y * (float)Math.Sin(radians) + z * (float)Math.Cos(radians);
+                        newY = y * (float)Math.Cos(angleInRadians) - z * (float)Math.Sin(angleInRadians);
+                        newZ = y * (float)Math.Sin(angleInRadians) + z * (float)Math.Cos(angleInRadians);
                         newX = x;
                     }
                     else if (axis == 'Y')
                     {
-                        newX = x * (float)Math.Cos(radians) + z * (float)Math.Sin(radians);
-                        newZ = -x * (float)Math.Sin(radians) + z * (float)Math.Cos(radians);
+                        newX = x * (float)Math.Cos(angleInRadians) + z * (float)Math.Sin(angleInRadians);
+                        newZ = -x * (float)Math.Sin(angleInRadians) + z * (float)Math.Cos(angleInRadians);
                         newY = y;
                     }
                     else if (axis == 'Z')
                     {
-                        newX = x * (float)Math.Cos(radians) - y * (float)Math.Sin(radians);
-                        newY = x * (float)Math.Sin(radians) + y * (float)Math.Cos(radians);
+                        newX = x * (float)Math.Cos(angleInRadians) - y * (float)Math.Sin(angleInRadians);
+                        newY = x * (float)Math.Sin(angleInRadians) + y * (float)Math.Cos(angleInRadians);
                         newZ = z;
                     }
 
-                    figureFrontArrays[i][j] = new Point3D((int)newX, (int)newY, (int)newZ);
+                    figureFrontArrays[i][j] = new Point3D(newX, newY, newZ);
+
+                    // Обновление угла в градусах
+                    figureFrontArrays[i][j].Z = angleInDegrees;
                 }
             }
 
@@ -314,38 +323,42 @@ namespace lab2
             {
                 for (int j = 0; j < figureBackArrays[i].Length; j++)
                 {
-                    float x = figureBackArraysBase[i][j].X;
-                    float y = figureBackArraysBase[i][j].Y;
-                    float z = figureBackArraysBase[i][j].Z;
+                    float x = (float)figureBackArraysBase[i][j].X;
+                    float y = (float)figureBackArraysBase[i][j].Y;
+                    float z = (float)figureBackArraysBase[i][j].Z;
 
                     float newX = 0, newY = 0, newZ = 0;
 
                     if (axis == 'X')
                     {
-                        newY = y * (float)Math.Cos(radians) - z * (float)Math.Sin(radians);
-                        newZ = y * (float)Math.Sin(radians) + z * (float)Math.Cos(radians);
+                        newY = y * (float)Math.Cos(angleInRadians) - z * (float)Math.Sin(angleInRadians);
+                        newZ = y * (float)Math.Sin(angleInRadians) + z * (float)Math.Cos(angleInRadians);
                         newX = x;
                     }
                     else if (axis == 'Y')
                     {
-                        newX = x * (float)Math.Cos(radians) + z * (float)Math.Sin(radians);
-                        newZ = -x * (float)Math.Sin(radians) + z * (float)Math.Cos(radians);
+                        newX = x * (float)Math.Cos(angleInRadians) + z * (float)Math.Sin(angleInRadians);
+                        newZ = -x * (float)Math.Sin(angleInRadians) + z * (float)Math.Cos(angleInRadians);
                         newY = y;
                     }
                     else if (axis == 'Z')
                     {
-                        newX = x * (float)Math.Cos(radians) - y * (float)Math.Sin(radians);
-                        newY = x * (float)Math.Sin(radians) + y * (float)Math.Cos(radians);
+                        newX = x * (float)Math.Cos(angleInRadians) - y * (float)Math.Sin(angleInRadians);
+                        newY = x * (float)Math.Sin(angleInRadians) + y * (float)Math.Cos(angleInRadians);
                         newZ = z;
                     }
 
-                    figureBackArrays[i][j] = new Point3D((int)newX, (int)newY, (int)newZ);
+                    figureBackArrays[i][j] = new Point3D(newX, newY, newZ);
+
+                    // Обновление угла в градусах
+                    figureBackArrays[i][j].Z = angleInDegrees;
                 }
             }
 
             // Обновление координат соединений точек по оси Z для задней стороны
             UpdateZAxisConnectionsBack();
         }
+
 
         private void UpdateZAxisConnectionsFront()
         {
@@ -405,45 +418,6 @@ namespace lab2
             }
         }
 
-
-        public void Scale(double scaleX, double scaleY, double scaleZ)
-        {
-            for (int i = 0; i < figureFrontArrays.Length; i++)
-            {
-                ScaleFigure(figureFrontArrays[i], scaleX, scaleY, scaleZ);
-            }
-
-            // Обновление координат соединений точек по оси Z
-            UpdateZAxisConnections();
-
-            Draw();
-        }
-
-        private void ScaleFigure(Point3D[] figure, double scaleX, double scaleY, double scaleZ)
-        {
-            for (int i = 0; i < figure.Length; i++)
-            {
-                figure[i] = new Point3D(
-                    (int)(figure[i].X * scaleX),
-                    (int)(figure[i].Y * scaleY),
-                    (int)(figure[i].Z * scaleZ)
-                );
-            }
-        }
-
-        public void Move(int deltaX, int deltaY, int deltaZ)
-        {
-            for (int i = 0; i < figureFrontArrays.Length; i++)
-            {
-                MoveFigure(figureFrontArrays[i], deltaX, deltaY, deltaZ);
-            }
-
-            // Обновление координат соединений точек по оси Z
-            UpdateZAxisConnections();
-
-            Draw();
-        }
-
         private void UpdateZAxisConnections()
         {
             int index = 0;
@@ -477,18 +451,6 @@ namespace lab2
             }
         }
 
-        private void MoveFigure(Point3D[] figure, int deltaX, int deltaY, int deltaZ)
-        {
-            for (int i = 0; i < figure.Length; i++)
-            {
-                figure[i] = new Point3D(
-                    figure[i].X + deltaX,
-                    figure[i].Y + deltaY,
-                    figure[i].Z + deltaZ
-                );
-            }
-        }
-
         private Point3D[][] CopyArray(Point3D[][] source)
         {
             Point3D[][] copy = new Point3D[source.Length][];
@@ -510,10 +472,103 @@ namespace lab2
             return copy;
         }
 
-        public void ApplyIsometricProjection()
+        private void MultiplyCoordinatesByCell()
         {
-            ApplyIsometricProjectionToFigure(figureFrontArrays);
-            ApplyIsometricProjectionToFigure(figureBackArrays);
+            double CELL = 20; // Замените это значение на нужное вам
+
+            // Пройдемся по всем координатам и умножим их на CELL
+            foreach (var array in figureFrontArrays)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    array[i].X *= CELL;
+                    array[i].Y *= CELL;
+                    array[i].Z *= CELL;
+                }
+            }
+
+            foreach (var array in figureBackArrays)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    array[i].X *= CELL;
+                    array[i].Y *= CELL;
+                    array[i].Z *= CELL;
+                }
+            }
+
+            for (int i = 0; i < zAxisConnectionsFront.Length; i++)
+            {
+                zAxisConnectionsFront[i].X *= CELL;
+                zAxisConnectionsFront[i].Y *= CELL;
+                zAxisConnectionsFront[i].Z *= CELL;
+            }
+
+            for (int i = 0; i < zAxisConnectionsBack.Length; i++)
+            {
+                zAxisConnectionsBack[i].X *= CELL;
+                zAxisConnectionsBack[i].Y *= CELL;
+                zAxisConnectionsBack[i].Z *= CELL;
+            }
+        }
+
+        public void Scale(double scaleX, double scaleY, double scaleZ)
+        {
+            // Масштабирование фигуры в глобальных координатах
+            for (int i = 0; i < figureFrontArrays.Length; i++)
+            {
+                ScaleFigure(figureFrontArrays[i], scaleX, scaleY, scaleZ);
+            }
+
+            for (int i = 0; i < figureBackArrays.Length; i++)
+            {
+                ScaleFigure(figureBackArrays[i], scaleX, scaleY, scaleZ);
+            }
+
+            // Масштабирование матрицы соединений
+            ScaleMatrix(zAxisConnectionsFront, scaleX, scaleY, scaleZ);
+            ScaleMatrix(zAxisConnectionsBack, scaleX, scaleY, scaleZ);
+
+            // Обновление координат соединений точек по оси Z
+            UpdateZAxisConnections();
+
+            // Отобразить масштабированную фигуру
+            Draw();
+        }
+
+
+
+        private void ScaleFigure(Point3D[] figure, double scaleX, double scaleY, double scaleZ)
+        {
+            for (int i = 0; i < figure.Length; i++)
+            {
+                figure[i].X *= scaleX;
+                figure[i].Y *= scaleY;
+                figure[i].Z *= scaleZ;
+            }
+        }
+
+        private void ScaleMatrix(Point3D[] matrix, double scaleX, double scaleY, double scaleZ)
+        {
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                matrix[i].X *= scaleX;
+                matrix[i].Y *= scaleY;
+                matrix[i].Z *= scaleZ;
+            }
+        }
+
+        public void Move(int deltaX, int deltaY, int deltaZ)
+        {
+            for (int i = 0; i < figureFrontArrays.Length; i++)
+            {
+                MoveFigure(figureFrontArrays[i], deltaX, deltaY, deltaZ);
+            }
+
+            for (int i = 0; i < figureBackArrays.Length; i++)
+            {
+                MoveFigure(figureBackArrays[i], deltaX, deltaY, deltaZ);
+            }
 
             // Обновление координат соединений точек по оси Z
             UpdateZAxisConnections();
@@ -521,30 +576,50 @@ namespace lab2
             Draw();
         }
 
-        private void ApplyIsometricProjectionToFigure(Point3D[][] figure)
+        private void MoveFigure(Point3D[] figure, int deltaX, int deltaY, int deltaZ)
         {
-            // Коэффициенты для изометрической проекции
-            double isometricX = 0.707;
-            double isometricY = 0.707;
-
             for (int i = 0; i < figure.Length; i++)
             {
-                for (int j = 0; j < figure[i].Length; j++)
-                {
-                    double x = figure[i][j].X;
-                    double y = figure[i][j].Y;
-                    double z = figure[i][j].Z;
-
-                    // Применение изометрической проекции
-                    double newX = x * isometricX - y * isometricX;
-                    double newY = x * isometricY + y * isometricY - z;
-
-                    figure[i][j] = new Point3D((int)newX, (int)newY, (int)z);
-                }
+                figure[i] = new Point3D(
+                    figure[i].X + deltaX,
+                    figure[i].Y + deltaY,
+                    figure[i].Z + deltaZ
+                );
             }
         }
 
-        public void ResetToBaseCoordinates()
+        // В вашем классе Cripper, создайте метод для преобразования текущих трехмерных координат в изометрические координаты
+        public void ConvertToIsometric()
+        {
+            for (int i = 0; i < figureFrontArrays.Length; i++)
+            {
+                for (int j = 0; j < figureFrontArrays[i].Length; j++)
+                {
+                    var point = figureFrontArraysBase[i][j];
+                    float isoX = (float)((point.X - point.Y) * Math.Cos(Math.PI / 6));
+                    float isoY = (float)(point.Z + (point.X + point.Y) * Math.Sin(Math.PI / 6));
+                    figureFrontArrays[i][j] = new Point3D(isoX, isoY, point.Z);
+                }
+            }
+
+            for (int i = 0; i < figureBackArrays.Length; i++)
+            {
+                for (int j = 0; j < figureBackArrays[i].Length; j++)
+                {
+                    var point = figureBackArraysBase[i][j];
+                    float isoX = (float)((point.X - point.Y) * Math.Cos(Math.PI / 6));
+                    float isoY = (float)(point.Z + (point.X + point.Y) * Math.Sin(Math.PI / 6));
+                    figureBackArrays[i][j] = new Point3D(isoX, isoY, point.Z);
+                }
+            }
+
+            // Обновите координаты соединений точек по оси Z
+            UpdateZAxisConnections();
+
+            Draw();
+        }
+
+        private void CopyBaseCoordinatesToFigures()
         {
             for (int i = 0; i < figureFrontArrays.Length; i++)
             {
@@ -573,8 +648,7 @@ namespace lab2
             // Также обновите координаты соединений по оси Z
             UpdateZAxisConnectionsFront();
             UpdateZAxisConnectionsBack();
-
-            Draw();
         }
+
     }
 }

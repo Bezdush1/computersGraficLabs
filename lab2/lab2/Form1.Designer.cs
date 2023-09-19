@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonDraw = new System.Windows.Forms.Button();
-            this.buttonBasicCoordinates = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonRotateX = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,41 +79,32 @@
             // 
             // buttonDraw
             // 
-            this.buttonDraw.Location = new System.Drawing.Point(626, 12);
-            this.buttonDraw.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDraw.Location = new System.Drawing.Point(835, 15);
+            this.buttonDraw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDraw.Name = "buttonDraw";
-            this.buttonDraw.Size = new System.Drawing.Size(101, 36);
+            this.buttonDraw.Size = new System.Drawing.Size(135, 76);
             this.buttonDraw.TabIndex = 0;
-            this.buttonDraw.Text = "Отрисовка фигуры";
+            this.buttonDraw.Text = "Отрисовка фигуры на базовых координатах";
             this.buttonDraw.UseVisualStyleBackColor = true;
             this.buttonDraw.Click += new System.EventHandler(this.buttonDraw_Click);
             // 
-            // buttonBasicCoordinates
-            // 
-            this.buttonBasicCoordinates.Location = new System.Drawing.Point(626, 53);
-            this.buttonBasicCoordinates.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBasicCoordinates.Name = "buttonBasicCoordinates";
-            this.buttonBasicCoordinates.Size = new System.Drawing.Size(101, 49);
-            this.buttonBasicCoordinates.TabIndex = 1;
-            this.buttonBasicCoordinates.Text = "На базовые координаты";
-            this.buttonBasicCoordinates.UseVisualStyleBackColor = true;
-            this.buttonBasicCoordinates.Click += new System.EventHandler(this.buttonClear_Click);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(578, 436);
+            this.pictureBox1.Size = new System.Drawing.Size(835, 800);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // buttonRotateX
             // 
-            this.buttonRotateX.Location = new System.Drawing.Point(626, 145);
-            this.buttonRotateX.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRotateX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRotateX.Location = new System.Drawing.Point(835, 178);
+            this.buttonRotateX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRotateX.Name = "buttonRotateX";
-            this.buttonRotateX.Size = new System.Drawing.Size(101, 36);
+            this.buttonRotateX.Size = new System.Drawing.Size(135, 44);
             this.buttonRotateX.TabIndex = 3;
             this.buttonRotateX.Text = "Повернуть";
             this.buttonRotateX.UseVisualStyleBackColor = true;
@@ -122,28 +112,29 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(591, 104);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(788, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 13);
+            this.label1.Size = new System.Drawing.Size(194, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Поворот относительно оси x";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(591, 124);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(788, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Повернуть на";
             // 
             // numericUpDownRotateX
             // 
-            this.numericUpDownRotateX.Location = new System.Drawing.Point(699, 123);
-            this.numericUpDownRotateX.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownRotateX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownRotateX.Location = new System.Drawing.Point(932, 151);
+            this.numericUpDownRotateX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownRotateX.Maximum = new decimal(new int[] {
             360,
             0,
@@ -155,7 +146,7 @@
             0,
             -2147483648});
             this.numericUpDownRotateX.Name = "numericUpDownRotateX";
-            this.numericUpDownRotateX.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownRotateX.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownRotateX.TabIndex = 6;
             this.numericUpDownRotateX.Value = new decimal(new int[] {
             90,
@@ -165,8 +156,9 @@
             // 
             // numericUpDownRotateY
             // 
-            this.numericUpDownRotateY.Location = new System.Drawing.Point(699, 221);
-            this.numericUpDownRotateY.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownRotateY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownRotateY.Location = new System.Drawing.Point(932, 272);
+            this.numericUpDownRotateY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownRotateY.Maximum = new decimal(new int[] {
             360,
             0,
@@ -178,7 +170,7 @@
             0,
             -2147483648});
             this.numericUpDownRotateY.Name = "numericUpDownRotateY";
-            this.numericUpDownRotateY.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownRotateY.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownRotateY.TabIndex = 10;
             this.numericUpDownRotateY.Value = new decimal(new int[] {
             90,
@@ -188,30 +180,31 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(591, 221);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(788, 272);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Повернуть на";
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(591, 201);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(788, 247);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 13);
+            this.label4.Size = new System.Drawing.Size(195, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Поворот относительно оси y";
             // 
             // buttonRotateY
             // 
-            this.buttonRotateY.Location = new System.Drawing.Point(626, 242);
-            this.buttonRotateY.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRotateY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRotateY.Location = new System.Drawing.Point(835, 298);
+            this.buttonRotateY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRotateY.Name = "buttonRotateY";
-            this.buttonRotateY.Size = new System.Drawing.Size(101, 36);
+            this.buttonRotateY.Size = new System.Drawing.Size(135, 44);
             this.buttonRotateY.TabIndex = 7;
             this.buttonRotateY.Text = "Повернуть";
             this.buttonRotateY.UseVisualStyleBackColor = true;
@@ -219,8 +212,9 @@
             // 
             // numericUpDownRotateZ
             // 
-            this.numericUpDownRotateZ.Location = new System.Drawing.Point(699, 308);
-            this.numericUpDownRotateZ.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownRotateZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownRotateZ.Location = new System.Drawing.Point(932, 379);
+            this.numericUpDownRotateZ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownRotateZ.Maximum = new decimal(new int[] {
             360,
             0,
@@ -232,7 +226,7 @@
             0,
             -2147483648});
             this.numericUpDownRotateZ.Name = "numericUpDownRotateZ";
-            this.numericUpDownRotateZ.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownRotateZ.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownRotateZ.TabIndex = 14;
             this.numericUpDownRotateZ.Value = new decimal(new int[] {
             90,
@@ -242,30 +236,31 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(591, 313);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(788, 385);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.Size = new System.Drawing.Size(98, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "Повернуть на";
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(591, 292);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(788, 359);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 13);
+            this.label6.Size = new System.Drawing.Size(194, 16);
             this.label6.TabIndex = 12;
             this.label6.Text = "Поворот относительно оси z";
             // 
             // buttonRotateZ
             // 
-            this.buttonRotateZ.Location = new System.Drawing.Point(626, 334);
-            this.buttonRotateZ.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRotateZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRotateZ.Location = new System.Drawing.Point(835, 411);
+            this.buttonRotateZ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRotateZ.Name = "buttonRotateZ";
-            this.buttonRotateZ.Size = new System.Drawing.Size(101, 36);
+            this.buttonRotateZ.Size = new System.Drawing.Size(135, 44);
             this.buttonRotateZ.TabIndex = 11;
             this.buttonRotateZ.Text = "Повернуть";
             this.buttonRotateZ.UseVisualStyleBackColor = true;
@@ -273,16 +268,17 @@
             // 
             // numericUpDownScaleX
             // 
+            this.numericUpDownScaleX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownScaleX.DecimalPlaces = 2;
-            this.numericUpDownScaleX.Location = new System.Drawing.Point(942, 59);
-            this.numericUpDownScaleX.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownScaleX.Location = new System.Drawing.Point(1256, 73);
+            this.numericUpDownScaleX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownScaleX.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDownScaleX.Name = "numericUpDownScaleX";
-            this.numericUpDownScaleX.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownScaleX.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownScaleX.TabIndex = 18;
             this.numericUpDownScaleX.ThousandsSeparator = true;
             this.numericUpDownScaleX.Value = new decimal(new int[] {
@@ -293,76 +289,77 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(834, 61);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(1112, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.Size = new System.Drawing.Size(138, 16);
             this.label7.TabIndex = 17;
             this.label7.Text = "Масштабировать на";
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(834, 41);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(1112, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 13);
+            this.label8.Size = new System.Drawing.Size(183, 16);
             this.label8.TabIndex = 16;
             this.label8.Text = "Масштабирование по оси x";
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(833, 114);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(1111, 140);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 13);
+            this.label9.Size = new System.Drawing.Size(138, 16);
             this.label9.TabIndex = 21;
             this.label9.Text = "Масштабировать на";
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(833, 93);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(1111, 114);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 13);
+            this.label10.Size = new System.Drawing.Size(184, 16);
             this.label10.TabIndex = 20;
             this.label10.Text = "Масштабирование по оси y";
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(833, 170);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(1111, 209);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 13);
+            this.label11.Size = new System.Drawing.Size(138, 16);
             this.label11.TabIndex = 24;
             this.label11.Text = "Масштабировать на";
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(833, 150);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(1111, 185);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(145, 13);
+            this.label12.Size = new System.Drawing.Size(183, 16);
             this.label12.TabIndex = 23;
             this.label12.Text = "Масштабирование по оси z";
             // 
             // numericUpDownScaleY
             // 
+            this.numericUpDownScaleY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownScaleY.DecimalPlaces = 2;
-            this.numericUpDownScaleY.Location = new System.Drawing.Point(941, 112);
-            this.numericUpDownScaleY.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownScaleY.Location = new System.Drawing.Point(1255, 138);
+            this.numericUpDownScaleY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownScaleY.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDownScaleY.Name = "numericUpDownScaleY";
-            this.numericUpDownScaleY.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownScaleY.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownScaleY.TabIndex = 25;
             this.numericUpDownScaleY.ThousandsSeparator = true;
             this.numericUpDownScaleY.Value = new decimal(new int[] {
@@ -373,16 +370,17 @@
             // 
             // numericUpDownScaleZ
             // 
+            this.numericUpDownScaleZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownScaleZ.DecimalPlaces = 2;
-            this.numericUpDownScaleZ.Location = new System.Drawing.Point(941, 170);
-            this.numericUpDownScaleZ.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownScaleZ.Location = new System.Drawing.Point(1255, 209);
+            this.numericUpDownScaleZ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownScaleZ.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDownScaleZ.Name = "numericUpDownScaleZ";
-            this.numericUpDownScaleZ.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownScaleZ.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownScaleZ.TabIndex = 26;
             this.numericUpDownScaleZ.ThousandsSeparator = true;
             this.numericUpDownScaleZ.Value = new decimal(new int[] {
@@ -393,20 +391,21 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(872, 12);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(1163, 15);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 13);
+            this.label13.Size = new System.Drawing.Size(132, 16);
             this.label13.TabIndex = 27;
             this.label13.Text = "Масштабирование ";
             // 
             // buttonScale
             // 
-            this.buttonScale.Location = new System.Drawing.Point(874, 193);
-            this.buttonScale.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonScale.Location = new System.Drawing.Point(1165, 238);
+            this.buttonScale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonScale.Name = "buttonScale";
-            this.buttonScale.Size = new System.Drawing.Size(101, 36);
+            this.buttonScale.Size = new System.Drawing.Size(135, 44);
             this.buttonScale.TabIndex = 28;
             this.buttonScale.Text = "Масштабировать";
             this.buttonScale.UseVisualStyleBackColor = true;
@@ -414,10 +413,11 @@
             // 
             // buttonTransfer
             // 
-            this.buttonTransfer.Location = new System.Drawing.Point(874, 422);
-            this.buttonTransfer.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTransfer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTransfer.Location = new System.Drawing.Point(1165, 519);
+            this.buttonTransfer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTransfer.Name = "buttonTransfer";
-            this.buttonTransfer.Size = new System.Drawing.Size(101, 36);
+            this.buttonTransfer.Size = new System.Drawing.Size(135, 44);
             this.buttonTransfer.TabIndex = 39;
             this.buttonTransfer.Text = "Переместить";
             this.buttonTransfer.UseVisualStyleBackColor = true;
@@ -425,119 +425,123 @@
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(896, 254);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(1195, 313);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 13);
+            this.label14.Size = new System.Drawing.Size(99, 16);
             this.label14.TabIndex = 38;
             this.label14.Text = "Перемещение";
             // 
             // numericUpDownTransferZ
             // 
-            this.numericUpDownTransferZ.Location = new System.Drawing.Point(941, 400);
-            this.numericUpDownTransferZ.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTransferZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownTransferZ.Location = new System.Drawing.Point(1255, 492);
+            this.numericUpDownTransferZ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownTransferZ.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.numericUpDownTransferZ.Name = "numericUpDownTransferZ";
-            this.numericUpDownTransferZ.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownTransferZ.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownTransferZ.TabIndex = 37;
             // 
             // numericUpDownTransferY
             // 
-            this.numericUpDownTransferY.Location = new System.Drawing.Point(941, 342);
-            this.numericUpDownTransferY.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTransferY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownTransferY.Location = new System.Drawing.Point(1255, 421);
+            this.numericUpDownTransferY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownTransferY.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.numericUpDownTransferY.Name = "numericUpDownTransferY";
-            this.numericUpDownTransferY.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownTransferY.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownTransferY.TabIndex = 36;
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(833, 400);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(1111, 492);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 13);
+            this.label15.Size = new System.Drawing.Size(113, 16);
             this.label15.TabIndex = 35;
             this.label15.Text = "Переместить на";
             // 
             // label16
             // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(833, 379);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(1111, 466);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 13);
+            this.label16.Size = new System.Drawing.Size(148, 16);
             this.label16.TabIndex = 34;
             this.label16.Text = "Переместить по оси z";
             // 
             // label17
             // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(833, 344);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(1111, 423);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 13);
+            this.label17.Size = new System.Drawing.Size(113, 16);
             this.label17.TabIndex = 33;
             this.label17.Text = "Переместить на";
             // 
             // label18
             // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(833, 323);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(1111, 398);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 13);
+            this.label18.Size = new System.Drawing.Size(149, 16);
             this.label18.TabIndex = 32;
             this.label18.Text = "Переместить по оси y";
             // 
             // numericUpDownTransferX
             // 
-            this.numericUpDownTransferX.Location = new System.Drawing.Point(942, 289);
-            this.numericUpDownTransferX.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTransferX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownTransferX.Location = new System.Drawing.Point(1256, 356);
+            this.numericUpDownTransferX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownTransferX.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.numericUpDownTransferX.Name = "numericUpDownTransferX";
-            this.numericUpDownTransferX.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownTransferX.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownTransferX.TabIndex = 31;
             // 
             // label19
             // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(834, 291);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(1112, 358);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(90, 13);
+            this.label19.Size = new System.Drawing.Size(113, 16);
             this.label19.TabIndex = 30;
             this.label19.Text = "Переместить на";
             // 
             // label20
             // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(834, 271);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(1112, 334);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(119, 13);
+            this.label20.Size = new System.Drawing.Size(148, 16);
             this.label20.TabIndex = 29;
             this.label20.Text = "Переместить по оси x";
             // 
             // buttonIsometricProection
             // 
-            this.buttonIsometricProection.Location = new System.Drawing.Point(626, 400);
-            this.buttonIsometricProection.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonIsometricProection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonIsometricProection.Location = new System.Drawing.Point(835, 492);
+            this.buttonIsometricProection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonIsometricProection.Name = "buttonIsometricProection";
-            this.buttonIsometricProection.Size = new System.Drawing.Size(101, 36);
+            this.buttonIsometricProection.Size = new System.Drawing.Size(135, 44);
             this.buttonIsometricProection.TabIndex = 40;
             this.buttonIsometricProection.Text = "Изометрическая проекция";
             this.buttonIsometricProection.UseVisualStyleBackColor = true;
@@ -545,9 +549,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 468);
+            this.ClientSize = new System.Drawing.Size(1405, 576);
             this.Controls.Add(this.buttonIsometricProection);
             this.Controls.Add(this.buttonTransfer);
             this.Controls.Add(this.label14);
@@ -584,9 +588,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRotateX);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonBasicCoordinates);
             this.Controls.Add(this.buttonDraw);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -607,7 +610,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonDraw;
-        private System.Windows.Forms.Button buttonBasicCoordinates;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonRotateX;
         private System.Windows.Forms.Label label1;

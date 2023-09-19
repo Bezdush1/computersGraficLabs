@@ -45,11 +45,6 @@ namespace lab2
            cripper.RotateZ(rotateZ);
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            cripper.ResetToBaseCoordinates();
-        }
-
         private void buttonScale_Click(object sender, EventArgs e)
         {
             double scaleX=(double)numericUpDownScaleX.Value;
@@ -70,7 +65,7 @@ namespace lab2
 
         private void buttonIsometricProection_Click(object sender, EventArgs e)
         {
-            cripper.ApplyIsometricProjection();
+            cripper.ConvertToIsometric();
         }
     }
 }
