@@ -47,6 +47,8 @@ namespace lab2
         private Point3D[][] figureFrontArraysBase;
         private Point3D[][] figureBackArraysBase;
 
+        private int alfa = 0;
+
         public Cripper(PictureBox pictureBox)
         {
             this.pictureBox = pictureBox;
@@ -104,7 +106,7 @@ namespace lab2
         }
 
         private void InitializeCoordinates()
-        { 
+        {
             bodyFront = new Point3D[]
             {
         new Point3D(-2, -2.5, 0),
@@ -588,16 +590,17 @@ namespace lab2
             }
         }
 
-        // В вашем классе Cripper, создайте метод для преобразования текущих трехмерных координат в изометрические координаты
         public void ConvertToIsometric()
         {
+            alfa += 60;
+
             for (int i = 0; i < figureFrontArrays.Length; i++)
             {
                 for (int j = 0; j < figureFrontArrays[i].Length; j++)
                 {
-                    var point = figureFrontArraysBase[i][j];
-                    float isoX = (float)((point.X - point.Y) * Math.Cos(Math.PI / 6));
-                    float isoY = (float)(point.Z + (point.X + point.Y) * Math.Sin(Math.PI / 6));
+                    var point = figureFrontArrays[i][j];
+                    float isoX = (float)((point.X - point.Y) * Math.Cos(alfa));
+                    float isoY = (float)((point.X + point.Y) * Math.Sin(alfa) - point.Z);
                     figureFrontArrays[i][j] = new Point3D(isoX, isoY, point.Z);
                 }
             }
@@ -606,9 +609,9 @@ namespace lab2
             {
                 for (int j = 0; j < figureBackArrays[i].Length; j++)
                 {
-                    var point = figureBackArraysBase[i][j];
-                    float isoX = (float)((point.X - point.Y) * Math.Cos(Math.PI / 6));
-                    float isoY = (float)(point.Z + (point.X + point.Y) * Math.Sin(Math.PI / 6));
+                    var point = figureBackArrays[i][j];
+                    float isoX = (float)((point.X - point.Y) * Math.Cos(alfa));
+                    float isoY = (float)((point.X + point.Y) * Math.Sin(alfa) - point.Z);
                     figureBackArrays[i][j] = new Point3D(isoX, isoY, point.Z);
                 }
             }
@@ -617,7 +620,13 @@ namespace lab2
             UpdateZAxisConnections();
 
             Draw();
+
+            if (alfa >= 360)
+            {
+                alfa = 0;
+            }
         }
+
 
         private void CopyBaseCoordinatesToFigures()
         {
@@ -650,5 +659,6 @@ namespace lab2
             UpdateZAxisConnectionsBack();
         }
 
+       
     }
 }
