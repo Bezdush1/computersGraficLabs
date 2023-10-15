@@ -354,10 +354,10 @@ namespace lab2
 
         public static void DefinePosition(double[,] matrixA, double[,] matrixB, Graphics g, Pen pen)
         {
-            decimal v06x = (decimal)matrixA[14, 0] - (decimal)matrixB[14, 0];
-            decimal v06y = (decimal)matrixA[14, 1] - (decimal)matrixB[14, 1]; 
-            decimal v05x = (decimal)matrixA[7, 0] - (decimal)matrixB[7, 0];
-            decimal v05y = (decimal)matrixA[7, 1] - (decimal)matrixB[7, 1];
+            decimal v06x = (decimal)matrixB[7, 0] - (decimal)matrixA[7, 0];
+            decimal v06y = (decimal)matrixB[7, 1] - (decimal)matrixA[7, 1]; 
+            decimal v05x = (decimal)matrixA[6, 0] - (decimal)matrixA[7, 0];
+            decimal v05y = (decimal)matrixA[6, 1] - (decimal)matrixA[7, 1];
 
             decimal nz = v06x*v05y - v06y*v05x;
 
