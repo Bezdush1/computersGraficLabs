@@ -142,7 +142,7 @@
             this.numericUpDownRotateX.Size = new System.Drawing.Size(90, 20);
             this.numericUpDownRotateX.TabIndex = 6;
             this.numericUpDownRotateX.Value = new decimal(new int[] {
-            90,
+            45,
             0,
             0,
             0});
@@ -166,7 +166,7 @@
             this.numericUpDownRotateY.Size = new System.Drawing.Size(90, 20);
             this.numericUpDownRotateY.TabIndex = 10;
             this.numericUpDownRotateY.Value = new decimal(new int[] {
-            90,
+            45,
             0,
             0,
             0});
